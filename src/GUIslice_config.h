@@ -38,6 +38,8 @@ extern "C" {
 #endif // __cplusplus
 
 // -----------------------------------------------------------------------------------------
+#ifndef GUI_USER_SETUP_LOADED //  Lets PlatformIO users define settings in
+                              //  platformio.ini
 
 // Import user configuration depending on device type
 #if defined(__linux__)
@@ -54,6 +56,7 @@ extern "C" {
   #error "Unknown device platform"
 #endif
 
+#endif // GUI_USER_SETUP_LOADED
 
 #ifdef __cplusplus
 }
